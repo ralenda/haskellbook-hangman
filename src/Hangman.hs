@@ -20,7 +20,7 @@ internalStateFromRunning (RunningState is) = is
 -- Initial state creation, with safe constructors
 
 newtype Tries = Tries Int
-newtype Word = Word String
+newtype Word = Word String deriving Show
 
 tries :: Int -> Maybe Tries
 tries n = if n > 0 then Just (Tries n) else Nothing

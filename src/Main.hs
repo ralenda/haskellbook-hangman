@@ -1,8 +1,8 @@
 module Main where
 
 import Hangman
+import HangmanIO
+import Control.Monad
 
 main :: IO ()
-main = do
-  putStrLn "hello world"
-  return ()
+main = forever newGame
